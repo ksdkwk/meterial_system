@@ -1,0 +1,210 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.example:SpringBoot-backend >-------------------
+[INFO] Building SpringBoot-backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.3:run (default-cli) > test-compile @ SpringBoot-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ SpringBoot-backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ SpringBoot-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ SpringBoot-backend ---
+[INFO] skip non existing resourceDirectory E:\overgame\project_IDEA2\SpringBoot-backeng\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ SpringBoot-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.3:run (default-cli) < test-compile @ SpringBoot-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.3:run (default-cli) @ SpringBoot-backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-11T12:38:05.150+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] c.e.s.SpringBootBackengApplication       : Starting SpringBootBackengApplication using Java 21.0.7 with PID 212560 (E:\overgame\project_IDEA2\SpringBoot-backeng\target\classes started by 绱槦 in E:\overgame\project_IDEA2\SpringBoot-backeng)
+2026-03-11T12:38:05.155+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] c.e.s.SpringBootBackengApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-11T12:38:05.209+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11T12:38:05.209+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11T12:38:06.024+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-11T12:38:06.038+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-11T12:38:06.039+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-11T12:38:06.073+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 863 ms
+2026-03-11T12:38:06.165+08:00 DEBUG 212560 --- [springboot-backend] [  restartedMain] com.zaxxer.hikari.util.UtilityElf        : Class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@57d144cd
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Get /10.201.8.171 network interface 
+Get network interface info: name:wireless_32768 (Intel(R) Wi-Fi 6E AX211 160MHz)
+Initialization Sequence datacenterId:2 workerId:14
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.16 
+2026-03-11T12:38:06.646+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] m.e.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@798f1348
+2026-03-11T12:38:06.749+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-03-11T12:38:06.754+08:00  INFO 212560 --- [springboot-backend] [  restartedMain] c.e.s.SpringBootBackengApplication       : Started SpringBootBackengApplication in 2.043 seconds (process running for 2.446)
+2026-03-11T12:38:35.226+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11T12:38:35.226+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-11T12:38:35.227+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1856d41] was not registered for synchronization because synchronization is not active
+2026-03-11T12:38:35.335+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+2026-03-11T12:38:35.335+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2026-03-11T12:38:35.336+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2026-03-11T12:38:35.336+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2026-03-11T12:38:35.336+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2026-03-11T12:38:35.336+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : credentials.....................com.zaxxer.hikari.util.Credentials@4ba630a7
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : credentialsProvider.............none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : credentialsProviderClassName....none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2026-03-11T12:38:35.337+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2026-03-11T12:38:35.338+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : driverClassName................."com.mysql.cj.jdbc.Driver"
+2026-03-11T12:38:35.338+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : exceptionOverride...............none
+2026-03-11T12:38:35.338+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:mysql://localhost:3306/meterial_system?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................120000
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2026-03-11T12:38:35.339+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2026-03-11T12:38:35.340+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2026-03-11T12:38:35.340+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2026-03-11T12:38:35.340+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2026-03-11T12:38:35.340+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2026-03-11T12:38:35.340+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2026-03-11T12:38:35.341+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2026-03-11T12:38:35.341+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-11T12:38:35.358+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (51d253d9-1965-4c8c-8b22-07cbb9042399)
+2026-03-11T12:38:35.493+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (51d253d9-1965-4c8c-8b22-07cbb9042399)
+2026-03-11T12:38:35.494+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a59e148
+2026-03-11T12:38:35.495+08:00  INFO 212560 --- [springboot-backend] [nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1267259804 wrapping com.mysql.cj.jdbc.ConnectionImpl@7a59e148] will not be managed by Spring
+==>  Preparing: SELECT role_id, role_name, role_code FROM tb_role WHERE role_code = ?
+==> Parameters: MANAGER(String)
+<==    Columns: role_id, role_name, role_code
+<==        Row: 1, 管理人员, MANAGER
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1856d41]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5eebd981] was not registered for synchronization because synchronization is not active
+2026-03-11T12:38:35.561+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-1] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@593530164 wrapping com.mysql.cj.jdbc.ConnectionImpl@7a59e148] will not be managed by Spring
+==>  Preparing: SELECT user_id, username, password, role_id, real_name, status FROM tb_user WHERE username = ? AND role_id = ? AND status = ?
+==> Parameters: 1(String), 1(Integer), 1(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5eebd981]
+2026-03-11T12:38:35.609+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1/10, idle=1/10, active=0, waiting=0)
+2026-03-11T12:38:35.610+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (0693565a-00e3-4d22-b132-abcb81e4db55)
+2026-03-11T12:38:35.620+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (0693565a-00e3-4d22-b132-abcb81e4db55)
+2026-03-11T12:38:35.620+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23b9324d
+2026-03-11T12:38:35.655+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=2/10, idle=2/10, active=0, waiting=0)
+2026-03-11T12:38:35.656+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (a477b328-b380-40c8-b42a-2a440f6c9370)
+2026-03-11T12:38:35.664+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (a477b328-b380-40c8-b42a-2a440f6c9370)
+2026-03-11T12:38:35.664+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62843876
+2026-03-11T12:38:35.702+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=3/10, idle=3/10, active=0, waiting=0)
+2026-03-11T12:38:35.702+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (8548600d-86c9-4d27-88da-386e3e971a17)
+2026-03-11T12:38:35.710+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (8548600d-86c9-4d27-88da-386e3e971a17)
+2026-03-11T12:38:35.710+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53acb9c7
+2026-03-11T12:38:35.747+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=4/10, idle=4/10, active=0, waiting=0)
+2026-03-11T12:38:35.748+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (454943d2-bac5-4b2b-b2fe-e915b0aea495)
+2026-03-11T12:38:35.756+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (454943d2-bac5-4b2b-b2fe-e915b0aea495)
+2026-03-11T12:38:35.756+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2abc739
+2026-03-11T12:38:35.793+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=5/10, idle=5/10, active=0, waiting=0)
+2026-03-11T12:38:35.794+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (ac6d968c-6a53-4277-a648-a30f3a0c7a21)
+2026-03-11T12:38:35.800+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (ac6d968c-6a53-4277-a648-a30f3a0c7a21)
+2026-03-11T12:38:35.801+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@633a1b4d
+2026-03-11T12:38:35.839+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=6/10, idle=6/10, active=0, waiting=0)
+2026-03-11T12:38:35.839+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (b50818bf-fc3f-42dc-9f42-e1bc4354d47e)
+2026-03-11T12:38:35.847+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (b50818bf-fc3f-42dc-9f42-e1bc4354d47e)
+2026-03-11T12:38:35.847+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e5393b
+2026-03-11T12:38:35.885+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=7/10, idle=7/10, active=0, waiting=0)
+2026-03-11T12:38:35.885+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (0b7928dc-c609-4c7d-a535-33dbc394e468)
+2026-03-11T12:38:35.891+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (0b7928dc-c609-4c7d-a535-33dbc394e468)
+2026-03-11T12:38:35.891+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17ef17aa
+2026-03-11T12:38:35.932+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=8/10, idle=8/10, active=0, waiting=0)
+2026-03-11T12:38:35.932+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (d969d427-2504-4660-a302-ca1342fa8ba9)
+2026-03-11T12:38:35.937+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (d969d427-2504-4660-a302-ca1342fa8ba9)
+2026-03-11T12:38:35.937+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f3ae4ad
+2026-03-11T12:38:35.978+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=9/10, idle=9/10, active=0, waiting=0)
+2026-03-11T12:38:35.978+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Attempting to create/setup new connection (c865e5af-3187-4254-b481-3b549e801093)
+2026-03-11T12:38:35.999+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Established new connection (c865e5af-3187-4254-b481-3b549e801093)
+2026-03-11T12:38:35.999+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@107b4dc4
+2026-03-11T12:38:36.040+08:00 DEBUG 212560 --- [springboot-backend] [onnection-adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10/10, idle=10/10, active=0, waiting=0)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15e2d94b] was not registered for synchronization because synchronization is not active
+2026-03-11T12:38:53.740+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1698195975 wrapping com.mysql.cj.jdbc.ConnectionImpl@7a59e148] will not be managed by Spring
+==>  Preparing: SELECT role_id, role_name, role_code FROM tb_role WHERE role_code = ?
+==> Parameters: MANAGER(String)
+<==    Columns: role_id, role_name, role_code
+<==        Row: 1, 管理人员, MANAGER
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15e2d94b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@675f7ebb] was not registered for synchronization because synchronization is not active
+2026-03-11T12:38:53.745+08:00 DEBUG 212560 --- [springboot-backend] [nio-8081-exec-3] o.s.jdbc.datasource.DataSourceUtils      : Fetching JDBC Connection from DataSource
+JDBC Connection [HikariProxyConnection@1693764506 wrapping com.mysql.cj.jdbc.ConnectionImpl@7a59e148] will not be managed by Spring
+==>  Preparing: SELECT user_id, username, password, role_id, real_name, status FROM tb_user WHERE username = ? AND role_id = ? AND status = ?
+==> Parameters: 1(String), 1(Integer), 1(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@675f7ebb]
+2026-03-11T12:39:05.622+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:39:05.622+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:39:35.631+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:39:35.631+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:40:05.637+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:40:05.637+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:40:12.129+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7a59e148 is alive
+2026-03-11T12:40:14.452+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@23b9324d is alive
+2026-03-11T12:40:16.944+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@107b4dc4 is alive
+2026-03-11T12:40:17.838+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2abc739 is alive
+2026-03-11T12:40:23.056+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@62843876 is alive
+2026-03-11T12:40:27.198+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@17ef17aa is alive
+2026-03-11T12:40:28.244+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@633a1b4d is alive
+2026-03-11T12:40:32.530+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@6e5393b is alive
+2026-03-11T12:40:34.459+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3f3ae4ad is alive
+2026-03-11T12:40:34.862+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@53acb9c7 is alive
+2026-03-11T12:40:35.648+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:40:35.648+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:41:05.659+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:41:05.659+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:41:35.670+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:41:35.670+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:41:48.770+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7a59e148 is alive
+2026-03-11T12:41:53.290+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@23b9324d is alive
+2026-03-11T12:41:57.892+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@107b4dc4 is alive
+2026-03-11T12:41:59.919+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2abc739 is alive
+2026-03-11T12:42:05.670+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10/10, idle=10/10, active=0, waiting=0)
+2026-03-11T12:42:05.670+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-03-11T12:42:10.456+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@62843876 is alive
+2026-03-11T12:42:18.519+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@17ef17aa is alive
+2026-03-11T12:42:20.695+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@633a1b4d is alive
+2026-03-11T12:42:29.223+08:00 DEBUG 212560 --- [springboot-backend] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@6e5393b is alive

@@ -1,0 +1,157 @@
+server:
+  port: 8081
+  servlet:
+    context-path:
+
+spring:
+  application:
+    name: springboot-backend
+  mail:
+    # 发送者邮箱
+    username: ${QQEMAIL_USERNAME}
+    # 申请到的授权码
+    password: ${QQEMAIL_PASSWORD}
+    # 配置 SMTP 服务器地址
+    host: smtp.qq.com
+    # 端口号465或587
+    port: 465
+    protocol: smtps
+    # 邮件编码为UTF-8
+    default-encoding: UTF-8
+    # 配置SSL 加密工厂
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+          # DEBUG 模式，方便排查错误
+          debug: true
+          ssl: true
+    #数据库配置
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/meterial_system?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DATABASE:0}
+      timeout: 2s
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+    listener:
+      simple:
+        default-requeue-rejected: false
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.example.springbootbackeng.mq
+      auto-offset-reset: earliest
+
+# MyBatis-Plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.example.springbootbackeng.entity
+  configuration:
+    map-underscore-to-camel-case: true  # 下划线转驼峰
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 打印SQL日志
+
+  devtools:
+    autoconfigure:
+      exclude: org.springframework.boot.devtools.autoconfigure.DevToolsDataSourceAutoConfiguration
+  # 核心修复：替换 Hibernate 7.x 兼容的方言
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect  # 关键修改点
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    # 添加方言自动检测，防止手动配置出错
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true  # 格式化SQL输出，方便调试
+
+logging:
+  level:
+    root: INFO
+    com.zaxxer.hikari: DEBUG
+    org.springframework.jdbc: DEBUG
+    org.hibernate.SQL: DEBUG  # 打印执行的SQL
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  endpoint:
+    health:
+      show-details: when_authorized
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+
+recovery:
+  code:
+    expire-minutes: 10
+
+security:
+  jwt:
+    # 至少32字符，生产环境请改为高强度随机密钥并通过环境变量注入
+    secret: "change-this-to-a-long-random-secret-key-2026"
+    expire-minutes: 120
+  password-migration:
+    # 一次性离线迁移开关：true=启动时把明文密码批量迁移为BCrypt，完成后请改回false
+    enabled: false
+    # 忽略“已完成标记”并强制重跑迁移
+    force: false
+
+app:
+  ratelimit:
+    application:
+      enabled: true
+      # 应用层限流（Redis令牌桶）：每个IP每秒100个请求
+      permits-per-second: 100
+      burst-capacity: 100
+  authz:
+    casbin:
+      enabled: true
+      model: casbin-model.conf
+      policy: casbin-policy.csv
+    oauth2:
+      # Spring Authorization Server 开关
+      enabled: true
+  logging:
+    dir: logs
+    logstash:
+      # ELK模式下由 logback-spring.xml 读取并投递到该地址
+      destination: ${LOGSTASH_DESTINATION:localhost:5044}
+  mq:
+    # false: 关闭MQ（默认，避免本地未安装中间件导致启动失败）
+    enabled: false
+    # rabbit 或 kafka
+    provider: rabbit
+  cache:
+    ttl-jitter-max-seconds: 120
+    null-ttl-jitter-max-seconds: 30
+    bloom:
+      enabled: true
+      # 位图大小，值越大误判率越低（128KB）
+      material-id-size: 1048576
+    warmup:
+      enabled: true
+      material-detail-limit: 20

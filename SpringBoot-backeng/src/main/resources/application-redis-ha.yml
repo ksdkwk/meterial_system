@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: redis-ha
+  data:
+    redis:
+      # Sentinel 模式（启用时配置以下两项）
+      sentinel:
+        master: ${REDIS_SENTINEL_MASTER:mymaster}
+        nodes: ${REDIS_SENTINEL_NODES:127.0.0.1:26379}
+
+      # Cluster 模式（若启用集群，请设置为真实节点列表）
+      # cluster:
+      #   nodes: ${REDIS_CLUSTER_NODES:127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003}
+
+      lettuce:
+        pool:
+          max-active: ${REDIS_POOL_MAX_ACTIVE:16}
+          max-idle: ${REDIS_POOL_MAX_IDLE:8}
+          min-idle: ${REDIS_POOL_MIN_IDLE:1}
+          max-wait: ${REDIS_POOL_MAX_WAIT:2s}

@@ -1,0 +1,436 @@
+﻿[
+    {
+        "controller":  "AiAnalysisResultController",
+        "method":  "configCheck",
+        "http":  "GET",
+        "path":  "/ai-analysis/inventory/config-check",
+        "serviceCalls":  "AiAnalysisResultService.getAiConfigCheck()"
+    },
+    {
+        "controller":  "AiAnalysisResultController",
+        "method":  "run",
+        "http":  "POST",
+        "path":  "/ai-analysis/inventory/run",
+        "serviceCalls":  "AiAnalysisResultService.runInventoryAnalysis()"
+    },
+    {
+        "controller":  "AiAnalysisResultController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/ai-analysis/inventory/list",
+        "serviceCalls":  "AiAnalysisResultService.listResults()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/ai-recognition-logs/list",
+        "serviceCalls":  "UserService.isManagerRoleCode(), AiRecognitionLogService.listVisibleLogs()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "recognize",
+        "http":  "POST",
+        "path":  "/ai-recognition-logs/recognize",
+        "serviceCalls":  "AiRecognitionLogService.runRecognition()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "loadUploadedImage",
+        "http":  "GET",
+        "path":  "/ai-recognition-logs/uploads/{fileName:.+}",
+        "serviceCalls":  ""
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "verify",
+        "http":  "PUT",
+        "path":  "/ai-recognition-logs/{recId}/verify",
+        "serviceCalls":  "AiRecognitionLogService.verifyRecognition()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "getSettings",
+        "http":  "GET",
+        "path":  "/ai-recognition-logs/settings",
+        "serviceCalls":  "AiRecognitionLogService.getRecognitionSettings()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "configCheck",
+        "http":  "GET",
+        "path":  "/ai-recognition-logs/config-check",
+        "serviceCalls":  "AiRecognitionLogService.getAiConfigCheck()"
+    },
+    {
+        "controller":  "AiRecognitionLogController",
+        "method":  "updateSettings",
+        "http":  "PUT",
+        "path":  "/ai-recognition-logs/settings",
+        "serviceCalls":  "AiRecognitionLogService.updateRecognitionSettings()"
+    },
+    {
+        "controller":  "AllocationPlanController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/allocation-plans/list",
+        "serviceCalls":  "AllocationPlanService.listAll()"
+    },
+    {
+        "controller":  "AllocationPlanController",
+        "method":  "demandOptions",
+        "http":  "GET",
+        "path":  "/allocation-plans/options/demands",
+        "serviceCalls":  "AllocationPlanService.listDemandOptions()"
+    },
+    {
+        "controller":  "AllocationPlanController",
+        "method":  "allocatorOptions",
+        "http":  "GET",
+        "path":  "/allocation-plans/options/allocators",
+        "serviceCalls":  "AllocationPlanService.listAllocatorOptions()"
+    },
+    {
+        "controller":  "CacheMonitorController",
+        "method":  "metrics",
+        "http":  "GET",
+        "path":  "/cache/metrics",
+        "serviceCalls":  "CacheMetricsService.snapshot()"
+    },
+    {
+        "controller":  "HelloController",
+        "method":  "hello",
+        "http":  "GET",
+        "path":  "/api/hello",
+        "serviceCalls":  ""
+    },
+    {
+        "controller":  "InventoryController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/inventories/list",
+        "serviceCalls":  "InventoryService.listAll()"
+    },
+    {
+        "controller":  "InventoryController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/inventories/{inventoryId}",
+        "serviceCalls":  "InventoryService.update()"
+    },
+    {
+        "controller":  "InventoryController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/inventories/{inventoryId}",
+        "serviceCalls":  "InventoryService.delete()"
+    },
+    {
+        "controller":  "InventoryLogController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/inventory-logs/list",
+        "serviceCalls":  "InventoryLogService.listAll()"
+    },
+    {
+        "controller":  "InventoryLogController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/inventory-logs/{logId}",
+        "serviceCalls":  "InventoryLogService.update()"
+    },
+    {
+        "controller":  "InventoryLogController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/inventory-logs/{logId}",
+        "serviceCalls":  "InventoryLogService.softDelete()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "getLoginCaptcha",
+        "http":  "GET",
+        "path":  "/login/captcha",
+        "serviceCalls":  "RedisLoginCaptchaStoreService.saveCaptcha()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "checkRecoveryAccount",
+        "http":  "GET",
+        "path":  "/login/recovery/check-account",
+        "serviceCalls":  "UserService.findActiveUserByUsername()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "sendRecoveryEmailCode",
+        "http":  "POST",
+        "path":  "/login/recovery/send-email-code",
+        "serviceCalls":  "UserService.findActiveUserByUsername(), MailCodeService.sendEmailCode(), PasswordUpdateService.createRecoveryRecord()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "sendRecoveryPhoneCode",
+        "http":  "POST",
+        "path":  "/login/recovery/send-phone-code",
+        "serviceCalls":  "UserService.findActiveUserByUsername(), PhoneCodeService.sendPhoneCode(), PasswordUpdateService.createRecoveryRecord()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "verifyRecoveryEmailCode",
+        "http":  "POST",
+        "path":  "/login/recovery/verify-email-code",
+        "serviceCalls":  "MailCodeService.verifyEmailCode(), PasswordUpdateService.markVerifyFailed(), PasswordUpdateService.markVerifySuccess(), RedisRecoveryStoreService.markVerified()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "verifyRecoveryPhoneCode",
+        "http":  "POST",
+        "path":  "/login/recovery/verify-phone-code",
+        "serviceCalls":  "PhoneCodeService.verifyPhoneCode(), PasswordUpdateService.markVerifyFailed(), PasswordUpdateService.markVerifySuccess(), RedisRecoveryStoreService.markVerified()"
+    },
+    {
+        "controller":  "LoginController",
+        "method":  "resetRecoveryPassword",
+        "http":  "POST",
+        "path":  "/login/recovery/reset-password",
+        "serviceCalls":  "RedisRecoveryStoreService.isVerified(), UserService.findActiveUserByUsername(), UserService.resetPasswordByUsername(), RedisRecoveryStoreService.clearVerified()"
+    },
+    {
+        "controller":  "MaterialController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/materials/list",
+        "serviceCalls":  "MaterialService.list()"
+    },
+    {
+        "controller":  "MaterialController",
+        "method":  "detail",
+        "http":  "GET",
+        "path":  "/materials/{id}",
+        "serviceCalls":  "MaterialService.getById()"
+    },
+    {
+        "controller":  "MaterialController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/materials/{id}",
+        "serviceCalls":  "MaterialService.update()"
+    },
+    {
+        "controller":  "MaterialController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/materials/{id}",
+        "serviceCalls":  "MaterialService.delete()"
+    },
+    {
+        "controller":  "MaterialDemandController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/material-demands/list",
+        "serviceCalls":  "MaterialDemandService.listAll()"
+    },
+    {
+        "controller":  "MaterialDemandController",
+        "method":  "audit",
+        "http":  "POST",
+        "path":  "/material-demands/audit",
+        "serviceCalls":  "MaterialDemandService.audit()"
+    },
+    {
+        "controller":  "MaterialDemandController",
+        "method":  "userOptions",
+        "http":  "GET",
+        "path":  "/material-demands/options/users",
+        "serviceCalls":  "MaterialDemandService.listUserOptions()"
+    },
+    {
+        "controller":  "MaterialDemandController",
+        "method":  "materialOptions",
+        "http":  "GET",
+        "path":  "/material-demands/options/materials",
+        "serviceCalls":  "MaterialDemandService.listMaterialOptions()"
+    },
+    {
+        "controller":  "MessageController",
+        "method":  "send",
+        "http":  "POST",
+        "path":  "/messages/send",
+        "serviceCalls":  "MessageService.send()"
+    },
+    {
+        "controller":  "MessageController",
+        "method":  "inbox",
+        "http":  "GET",
+        "path":  "/messages/inbox",
+        "serviceCalls":  "MessageService.inbox()"
+    },
+    {
+        "controller":  "MessageController",
+        "method":  "sent",
+        "http":  "GET",
+        "path":  "/messages/sent",
+        "serviceCalls":  "MessageService.sent()"
+    },
+    {
+        "controller":  "MessageController",
+        "method":  "markRead",
+        "http":  "POST",
+        "path":  "/messages/read",
+        "serviceCalls":  "MessageService.markRead()"
+    },
+    {
+        "controller":  "OperationLogController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/operation-logs/list",
+        "serviceCalls":  "OperationLogService.listAll()"
+    },
+    {
+        "controller":  "ReviewLogController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/review-logs/list",
+        "serviceCalls":  "ReviewLogService.listAll()"
+    },
+    {
+        "controller":  "StatsController",
+        "method":  "getUsersCount",
+        "http":  "GET",
+        "path":  "/stats/users-count",
+        "serviceCalls":  "UserService.getTotalUserCount()"
+    },
+    {
+        "controller":  "SupplierController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/suppliers/list",
+        "serviceCalls":  "SupplierService.list()"
+    },
+    {
+        "controller":  "SupplierController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/suppliers/{supplierId}",
+        "serviceCalls":  "SupplierService.update()"
+    },
+    {
+        "controller":  "SupplierController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/suppliers/{supplierId}",
+        "serviceCalls":  "SupplierService.delete()"
+    },
+    {
+        "controller":  "TeamController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/teams/list",
+        "serviceCalls":  "TeamService.list()"
+    },
+    {
+        "controller":  "TeamController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/teams/{teamId}",
+        "serviceCalls":  "TeamService.update()"
+    },
+    {
+        "controller":  "TeamController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/teams/{teamId}",
+        "serviceCalls":  "TeamService.delete()"
+    },
+    {
+        "controller":  "TransportRecordController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/transport-records/list",
+        "serviceCalls":  "TransportRecordService.listAll()"
+    },
+    {
+        "controller":  "UserController",
+        "method":  "listUsers",
+        "http":  "GET",
+        "path":  "/users/list",
+        "serviceCalls":  ""
+    },
+    {
+        "controller":  "UserController",
+        "method":  "updateUser",
+        "http":  "PUT",
+        "path":  "/users/{userId}",
+        "serviceCalls":  "UserService.updateUser()"
+    },
+    {
+        "controller":  "UserController",
+        "method":  "deleteUser",
+        "http":  "DELETE",
+        "path":  "/users/{userId}",
+        "serviceCalls":  "UserService.deleteUser()"
+    },
+    {
+        "controller":  "UserController",
+        "method":  "batchDeleteUsers",
+        "http":  "DELETE",
+        "path":  "/users/batch",
+        "serviceCalls":  "UserService.batchDeleteUsers()"
+    },
+    {
+        "controller":  "UserSecurityController",
+        "method":  "getBindings",
+        "http":  "GET",
+        "path":  "/users/security/bindings",
+        "serviceCalls":  ""
+    },
+    {
+        "controller":  "UserSecurityController",
+        "method":  "sendCurrentCode",
+        "http":  "POST",
+        "path":  "/users/security/send-current-code",
+        "serviceCalls":  "MailCodeService.sendEmailCode(), PhoneCodeService.sendPhoneCode()"
+    },
+    {
+        "controller":  "UserSecurityController",
+        "method":  "verifyCurrentCode",
+        "http":  "POST",
+        "path":  "/users/security/verify-current-code",
+        "serviceCalls":  "MailCodeService.verifyEmailCode(), PhoneCodeService.verifyPhoneCode()"
+    },
+    {
+        "controller":  "UserSecurityController",
+        "method":  "sendNewCode",
+        "http":  "POST",
+        "path":  "/users/security/send-new-code",
+        "serviceCalls":  "MailCodeService.sendEmailCode(), PhoneCodeService.sendPhoneCode()"
+    },
+    {
+        "controller":  "UserSecurityController",
+        "method":  "updateBinding",
+        "http":  "POST",
+        "path":  "/users/security/update-binding",
+        "serviceCalls":  "MailCodeService.verifyEmailCode(), PhoneCodeService.verifyPhoneCode(), UserService.updateUserMail(), UserService.updateUserPhone()"
+    },
+    {
+        "controller":  "VehicleController",
+        "method":  "list",
+        "http":  "GET",
+        "path":  "/vehicles/list",
+        "serviceCalls":  "VehicleService.list()"
+    },
+    {
+        "controller":  "VehicleController",
+        "method":  "update",
+        "http":  "PUT",
+        "path":  "/vehicles/{vehicleId}",
+        "serviceCalls":  "VehicleService.update()"
+    },
+    {
+        "controller":  "VehicleController",
+        "method":  "delete",
+        "http":  "DELETE",
+        "path":  "/vehicles/{vehicleId}",
+        "serviceCalls":  "VehicleService.delete()"
+    }
+]

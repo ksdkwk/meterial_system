@@ -1,0 +1,14 @@
+spring:
+  config:
+    activate:
+      on-profile: elk
+
+logging:
+  level:
+    root: INFO
+    com.example.springbootbackeng: INFO
+
+app:
+  logging:
+    logstash:
+      destination: ${LOGSTASH_DESTINATION:localhost:5044}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootbackeng.mapper.UserMapper">
+    <!-- 根据账号+角色ID+状态查询用户 -->
+    <select id="selectByUsernameAndRoleId" resultType="com.example.springbootbackeng.entity.User">
+        SELECT user_id, username, password, role_id, real_name, status
+        FROM tb_user
+        WHERE username = #{username}
+          AND role_id = #{roleId}
+          AND status = #{status}
+    </select>
+
+        <select id="selectByUsernameAndStatus" resultType="com.example.springbootbackeng.entity.User">
+                SELECT user_id, username, real_name, phone, user_mail, status
+                FROM tb_user
+                WHERE username = #{username}
+                    AND status = #{status}
+                LIMIT 1
+        </select>
+</mapper>

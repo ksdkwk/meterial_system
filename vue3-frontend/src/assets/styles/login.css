@@ -1,0 +1,347 @@
+/* CSS变量定义，用于存储颜色值 */
+:root {
+    --bg1: #ffffff;        /* 主背景色1 */
+    --bg2: #ffffff;        /* 主背景色2 */
+    --card: #ffffff;       /* 卡片背景色 */
+    --text: #2b3f55;       /* 主要文本颜色 */
+    --sub: #5f738e;        /* 次要文本颜色 */
+    --line: #e9edf3;       /* 边框线颜色 */
+    --primary: #ff8a20;    /* 主要按钮颜色 */
+    --primary-hover: #ff7a00; /* 主要按钮悬停颜色 */
+    --link: #2d6fb2;       /* 链接颜色 */
+    --input-bg: #ffffff;
+    --muted-text: #5f738e;
+    --forgot-title: #222;
+}
+
+/* 全局盒模型设置 */
+* {
+    box-sizing: border-box;
+}
+
+/* 页面主体样式 */
+body {
+    margin: 0;             /* 移除默认外边距 */
+    min-height: 100vh;     /* 最小高度为视口高度 */
+    display: flex;         /* 使用弹性布局 */
+    align-items: center;   /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: transparent;
+}
+
+/* 登录卡片样式 */
+.login-card {
+    width: 330px;         /* 卡片宽度 */
+    background: var(--card); /* 卡片背景色 */
+    border-radius: 10px;   /* 圆角 */
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .18); /* 阴影效果 */
+    padding: 24px 24px 18px; /* 内边距 */
+}
+
+/* 标题样式 */
+.title {
+    text-align: center;   /* 文本居中 */
+    margin: 0;             /* 移除默认外边距 */
+    font-size: 20px;       /* 字体大小 */
+    font-weight: 700;      /* 字体粗细 */
+    color: var(--text);    /* 文本颜色 */
+    letter-spacing: .5px;  /* 字符间距 */
+}
+
+/* 副标题样式 */
+.sub {
+    text-align: center;   /* 文本居中 */
+    margin: 6px 0 18px;   /* 上下外边距 */
+    font-size: 12px;      /* 字体大小 */
+    color: var(--sub);    /* 文本颜色 */
+}
+
+/* 输入框容器样式 */
+.field {
+    margin-bottom: 12px;  /* 底部外边距 */
+    position: relative;    /* 相对定位 */
+}
+
+/* 输入框样式 */
+.input {
+    width: 100%;          /* 宽度占满容器 */
+    height: 40px;         /* 高度 */
+    border: 1px solid var(--line); /* 边框 */
+    border-radius: 6px;   /* 圆角 */
+    padding: 0 12px;      /* 内边距 */
+    font-size: 14px;      /* 字体大小 */
+    color: var(--text);   /* 文本颜色 */
+    outline: none;        /* 移除轮廓线 */
+    transition: .2s;      /* 过渡效果 */
+    background: var(--input-bg);      /* 背景色 */
+}
+
+/* 输入框聚焦状态样式 */
+.input:focus {
+    border-color: #9cbcff; /* 聚焦时边框颜色 */
+    box-shadow: 0 0 0 3px rgba(106, 155, 255, .15); /* 聚焦时阴影效果 */
+}
+
+.captcha-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha-field .input {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.captcha-image {
+    width: 110px;
+    height: 40px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    background: #f7f7f7;
+}
+
+/* 行元素样式 */
+.row {
+    display: flex;        /* 弹性布局 */
+    align-items: center;  /* 垂直居中对齐 */
+    justify-content: space-between; /* 两端对齐 */
+    margin: 4px 0 14px;   /* 上下外边距 */
+    font-size: 12px;      /* 字体大小 */
+    color: var(--muted-text);       /* 文本颜色 */
+}
+
+/* 记住我选项样式 */
+.remember {
+    display: flex;        /* 弹性布局 */
+    align-items: center;  /* 垂直居中对齐 */
+    gap: 6px;             /* 元素间距 */
+    user-select: none;    /* 禁用文本选择 */
+}
+
+/* 记住我复选框样式 */
+.remember input {
+    width: 14px;          /* 宽度 */
+    height: 14px;         /* 高度 */
+    accent-color: #5a8dff; /* 复选框颜色 */
+}
+
+/* 行链接样式 */
+.row a {
+    color: var(--link);   /* 文本颜色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+/* 行链接悬停样式 */
+.row a:hover {
+    text-decoration: underline; /* 悬停时显示下划线 */
+}
+
+/* 按钮样式 */
+.btn {
+    width: 100%;          /* 宽度占满容器 */
+    height: 40px;         /* 高度 */
+    border: 0;            /* 移除边框 */
+    border-radius: 6px;   /* 圆角 */
+    background: var(--primary); /* 背景色 */
+    color: #fff;          /* 文本颜色 */
+    font-size: 15px;      /* 字体大小 */
+    font-weight: 600;     /* 字体粗细 */
+    cursor: pointer;      /* 鼠标指针样式 */
+    transition: .2s;      /* 过渡效果 */
+}
+
+/* 按钮悬停样式 */
+.btn:hover {
+    background: var(--primary-hover); /* 悬停时背景色 */
+}
+
+/* 页脚样式 */
+.footer {
+    margin-top: 14px;     /* 顶部外边距 */
+    text-align: center;   /* 文本居中 */
+    color: #b0b5be;       /* 文本颜色 */
+    font-size: 11px;      /* 字体大小 */
+}
+
+.forgot-card {
+    width: 570px;
+    max-width: 92vw;
+    padding: 56px 96px 48px;
+    border-radius: 12px;
+    background: var(--card);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+}
+
+.forgot-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.forgot-topbar {
+    height: 70px;
+    padding: 0 32px;
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.forgot-main {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.forgot-system-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: .5px;
+}
+
+.forgot-page-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--muted-text);
+    padding-left: 20px;
+    border-left: 1px solid var(--line);
+}
+
+.forgot-title {
+    margin: 0 0 28px;
+    padding-left: 10px;
+    border-left: 3px solid #4b97ff;
+    font-size: 34px;
+    line-height: 1;
+    color: var(--forgot-title);
+    font-weight: 500;
+}
+
+.forgot-label {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: var(--forgot-title);
+}
+
+.forgot-card .field {
+    margin-bottom: 26px;
+}
+
+.forgot-card .input {
+    height: 44px;
+    font-size: 28px;
+    padding: 0 22px;
+}
+
+.forgot-card .input.input-error {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(255, 77, 79, .15);
+}
+
+.field-error {
+    margin-top: 8px;
+    color: #ff4d4f;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.code-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.code-row .input {
+    flex: 1;
+}
+
+.resend-btn {
+    height: 44px;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+.forgot-btn {
+    height: 46px;
+    font-size: 26px;
+    font-weight: 500;
+    border-radius: 10px;
+    background: var(--primary);
+}
+
+.forgot-btn:hover {
+    background: var(--primary-hover);
+}
+
+.forgot-links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.forgot-links a {
+    color: #4b97ff;
+    text-decoration: none;
+}
+
+.forgot-links a:hover {
+    text-decoration: underline;
+}
+
+.verify-tip {
+    margin: -8px 0 16px;
+    color: var(--muted-text);
+    font-size: 14px;
+}
+
+.verify-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.verify-item {
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: #fff;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.verify-item:hover {
+    border-color: #5a8dff;
+    box-shadow: 0 0 0 3px rgba(90, 141, 255, .12);
+}
+
+.verify-item-title {
+    font-size: 20px;
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.verify-item-desc {
+    color: var(--muted-text);
+    font-size: 14px;
+}
+
+.verify-mail {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: var(--text);
+}

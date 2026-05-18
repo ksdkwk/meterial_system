@@ -1,0 +1,45 @@
+# role, obj(pattern), act(regex), ip(regex)
+p, MANAGER, /*, (GET|POST|PUT|DELETE|PATCH), .*
+p, WAREHOUSE, /materials, (POST), .*
+p, WAREHOUSE, /materials/list, (GET), .*
+p, WAREHOUSE, /materials/*, (GET|PUT|DELETE), .*
+p, WAREHOUSE, /inventories/*, (GET|POST|PUT|DELETE), .*
+p, WAREHOUSE, /inventory-logs/*, (GET|POST), .*
+p, WAREHOUSE, /material-demands/list, (GET), .*
+p, WAREHOUSE, /allocation-plans/*, (GET|POST), .*
+p, WAREHOUSE, /transport-records, (POST), .*
+p, WAREHOUSE, /transport-records/list, (GET), .*
+p, WAREHOUSE, /transport-records/*, (GET|POST), .*
+p, WAREHOUSE, /teams, (POST), .*
+p, WAREHOUSE, /teams/list, (GET), .*
+p, WAREHOUSE, /teams/*, (GET|POST|PUT|DELETE), .*
+p, WAREHOUSE, /suppliers, (POST), .*
+p, WAREHOUSE, /suppliers/list, (GET), .*
+p, WAREHOUSE, /suppliers/*, (GET|POST|PUT|DELETE), .*
+p, WAREHOUSE, /vehicles, (POST), .*
+p, WAREHOUSE, /vehicles/list, (GET), .*
+p, WAREHOUSE, /vehicles/*, (GET|POST|PUT|DELETE), .*
+p, WAREHOUSE, /ai-analysis/inventory/config-check, (GET), .*
+p, WAREHOUSE, /ai-analysis/inventory/list, (GET), .*
+p, WAREHOUSE, /ai-analysis/inventory/run, (POST), .*
+p, WAREHOUSE, /ai-analysis/inventory/*, (GET|POST), .*
+p, WAREHOUSE, /ai-recognition-logs/list, (GET), .*
+p, WAREHOUSE, /ai-recognition-logs/recognize/upload, (POST), .*
+p, WAREHOUSE, /ai-recognition-logs/settings, (GET|PUT), .*
+p, WAREHOUSE, /ai-recognition-logs/*, (GET|POST|PUT), .*
+p, WORKER, /material-demands/*, (GET|POST), .*
+p, WORKER, /materials/list, (GET), .*
+p, WORKER, /teams/list, (GET), .*
+p, WORKER, /inventories/list, (GET), .*
+p, WORKER, /inventory-logs/list, (GET), .*
+p, WORKER, /material-demands/list, (GET), .*
+p, WORKER, /ai-analysis/inventory/config-check, (GET), .*
+p, WORKER, /ai-analysis/inventory/list, (GET), .*
+p, WORKER, /ai-analysis/inventory/run, (POST), .*
+p, WORKER, /ai-recognition-logs/list, (GET), .*
+p, WORKER, /ai-recognition-logs/uploads/*, (GET), .*
+
+# role hierarchy/self mapping
+g, MANAGER, MANAGER
+g, WAREHOUSE, WAREHOUSE
+g, WORKER, WORKER

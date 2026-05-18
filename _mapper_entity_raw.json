@@ -1,0 +1,66 @@
+﻿[
+    {
+        "mapper":  "AiAnalysisResultMapper",
+        "entity":  "AiAnalysisResult"
+    },
+    {
+        "mapper":  "AiRecognitionLogMapper",
+        "entity":  "AiRecognitionLog"
+    },
+    {
+        "mapper":  "AllocationPlanMapper",
+        "entity":  "AllocationPlan"
+    },
+    {
+        "mapper":  "InventoryLogMapper",
+        "entity":  "InventoryLog"
+    },
+    {
+        "mapper":  "InventoryMapper",
+        "entity":  "Inventory"
+    },
+    {
+        "mapper":  "MaterialDemandMapper",
+        "entity":  "MaterialDemand"
+    },
+    {
+        "mapper":  "MaterialMapper",
+        "entity":  "Material"
+    },
+    {
+        "mapper":  "OperationLogMapper",
+        "entity":  "OperationLog"
+    },
+    {
+        "mapper":  "PasswordUpdateMapper",
+        "entity":  "PasswordUpdate"
+    },
+    {
+        "mapper":  "ReviewLogMapper",
+        "entity":  ""
+    },
+    {
+        "mapper":  "RoleMapper",
+        "entity":  "Role"
+    },
+    {
+        "mapper":  "SupplierMapper",
+        "entity":  "Supplier"
+    },
+    {
+        "mapper":  "TeamMapper",
+        "entity":  "Team"
+    },
+    {
+        "mapper":  "TransportRecordMapper",
+        "entity":  "TransportRecord"
+    },
+    {
+        "mapper":  "UserMapper",
+        "entity":  "User"
+    },
+    {
+        "mapper":  "VehicleMapper",
+        "entity":  "Vehicle"
+    }
+]

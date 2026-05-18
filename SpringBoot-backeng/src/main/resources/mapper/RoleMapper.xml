@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootbackeng.mapper.RoleMapper">
+    <!-- 根据角色编码查询角色 -->
+    <select id="selectByRoleCode" resultType="com.example.springbootbackeng.entity.Role">
+        SELECT role_id, role_name, role_code
+        FROM tb_role
+        WHERE role_code = #{roleCode}
+    </select>
+</mapper>

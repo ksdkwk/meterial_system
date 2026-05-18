@@ -1,0 +1,95 @@
+groups:
+  - name: springboot-performance-stability
+    rules:
+      - alert: SpringBootHttpP95TooHigh
+        expr: |
+          histogram_quantile(
+            0.95,
+            sum(rate(http_server_requests_seconds_bucket{job="springboot-backend"}[5m])) by (le, service)
+          ) > 0.8
+        for: 5m
+        labels:
+          severity: warning
+          category: latency
+        annotations:
+          summary: "HTTP P95 时延过高"
+          description: "服务 {{ $labels.service }} 的 HTTP P95 持续 5 分钟 > 0.8s，当前值={{ $value }}s"
+
+      - alert: SpringBootHikariPoolNearExhausted
+        expr: |
+          (
+            hikaricp_connections_active{job="springboot-backend"}
+            /
+            clamp_min(hikaricp_connections_max{job="springboot-backend"}, 1)
+          ) > 0.8
+        for: 5m
+        labels:
+          severity: warning
+          category: database
+        annotations:
+          summary: "数据库连接池使用率过高"
+          description: "HikariCP 活跃连接占比持续 5 分钟 > 80%，当前值={{ $value }}"
+
+      - alert: SpringBootCacheHitRatioLow
+        expr: |
+          (
+            sum(rate(app_cache_hit_total{job="springboot-backend"}[10m]))
+            /
+            clamp_min(
+              sum(rate(app_cache_hit_total{job="springboot-backend"}[10m]))
+              + sum(rate(app_cache_miss_total{job="springboot-backend"}[10m]))
+              + sum(rate(app_cache_null_hit_total{job="springboot-backend"}[10m])),
+              1e-9
+            )
+          ) < 0.6
+        for: 15m
+        labels:
+          severity: warning
+          category: cache
+        annotations:
+          summary: "缓存命中率持续下降"
+          description: "10 分钟窗口缓存命中率持续 15 分钟 < 60%，当前值={{ $value }}"
+
+      - alert: SpringBootLoginCaptchaVerifyFailHigh
+        expr: |
+          sum(rate(app_auth_captcha_verify_fail_total{job="springboot-backend"}[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "登录验证码失败率过高"
+          description: "5 分钟窗口验证码失败速率持续 > 1 次/秒，当前值={{ $value }}，请排查暴力尝试或机器人流量"
+
+      - alert: SpringBootLoginCaptchaLockTriggered
+        expr: |
+          increase(app_auth_captcha_lock_total{job="springboot-backend"}[10m]) >= 3
+        for: 1m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "登录验证码锁定事件频发"
+          description: "10 分钟内验证码锁定次数 >= 3，当前值={{ $value }}，建议核查来源IP与账号攻击行为"
+
+      - alert: SpringBootApplicationRateLimitBlockedHigh
+        expr: |
+          increase(app_ratelimit_blocked_total{job="springboot-backend",layer="application"}[5m]) >= 200
+        for: 3m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "应用层限流触发频繁"
+          description: "5分钟内应用层限流拦截次数 >= 200，当前值={{ $value }}，请检查是否存在流量洪峰或攻击"
+
+      - alert: SpringBootMethodRateLimitBlockedHigh
+        expr: |
+          increase(app_ratelimit_blocked_total{job="springboot-backend",layer="method"}[5m]) >= 100
+        for: 3m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "方法级限流触发频繁"
+          description: "5分钟内方法级限流拦截次数 >= 100，当前值={{ $value }}，建议排查热点接口与恶意重试"

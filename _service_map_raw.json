@@ -1,0 +1,110 @@
+﻿[
+    {
+        "service":  "AiAnalysisResultService",
+        "impl":  "AiAnalysisResultServiceImpl",
+        "mappers":  "AiAnalysisResultMapper, MaterialMapper, InventoryMapper, InventoryLogMapper, MaterialDemandMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "AiRecognitionLogService",
+        "impl":  "AiRecognitionLogServiceImpl",
+        "mappers":  "AiRecognitionLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "AllocationPlanService",
+        "impl":  "AllocationPlanServiceImpl",
+        "mappers":  "AllocationPlanMapper, MaterialDemandMapper, InventoryMapper, InventoryLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "InventoryLogService",
+        "impl":  "InventoryLogServiceImpl",
+        "mappers":  "InventoryLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "InventoryService",
+        "impl":  "InventoryServiceImpl",
+        "mappers":  "InventoryMapper, InventoryLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "MailCodeService",
+        "impl":  "MailCodeServiceImpl",
+        "mappers":  "",
+        "baseEntity":  null
+    },
+    {
+        "service":  "MaterialDemandService",
+        "impl":  "MaterialDemandServiceImpl",
+        "mappers":  "MaterialDemandMapper, UserMapper, MaterialMapper, ReviewLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "MaterialService",
+        "impl":  "MaterialServiceImpl",
+        "mappers":  "MaterialMapper",
+        "baseEntity":  "Material"
+    },
+    {
+        "service":  "MessageService",
+        "impl":  "MessageServiceImpl",
+        "mappers":  "UserMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "OperationLogService",
+        "impl":  "OperationLogServiceImpl",
+        "mappers":  "OperationLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "PasswordUpdateService",
+        "impl":  "PasswordUpdateServiceImpl",
+        "mappers":  "PasswordUpdateMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "PhoneCodeService",
+        "impl":  "PhoneCodeServiceImpl",
+        "mappers":  "",
+        "baseEntity":  null
+    },
+    {
+        "service":  "ReviewLogService",
+        "impl":  "ReviewLogServiceImpl",
+        "mappers":  "ReviewLogMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "SupplierService",
+        "impl":  "SupplierServiceImpl",
+        "mappers":  "SupplierMapper",
+        "baseEntity":  "Supplier"
+    },
+    {
+        "service":  "TeamService",
+        "impl":  "TeamServiceImpl",
+        "mappers":  "TeamMapper",
+        "baseEntity":  "Team"
+    },
+    {
+        "service":  "TransportRecordService",
+        "impl":  "TransportRecordServiceImpl",
+        "mappers":  "TransportRecordMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "UserService",
+        "impl":  "UserServiceImpl",
+        "mappers":  "UserMapper, RoleMapper",
+        "baseEntity":  null
+    },
+    {
+        "service":  "VehicleService",
+        "impl":  "VehicleServiceImpl",
+        "mappers":  "VehicleMapper",
+        "baseEntity":  "Vehicle"
+    }
+]
